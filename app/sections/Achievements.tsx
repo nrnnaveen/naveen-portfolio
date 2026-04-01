@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { HiStar, HiStar, HiBolt } from 'react-icons/hi'
+import { HiStar, HiBolt } from 'react-icons/hi'
 import { FaAward, FaMedal, FaBrain, FaCode } from 'react-icons/fa'
 
 const achievements = [
