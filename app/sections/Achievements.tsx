@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { HiTrophy, HiStar, HiLightningBolt } from 'react-icons/hi'
+import { HiStar, HiStar, HiBolt } from 'react-icons/hi'
 import { FaAward, FaMedal, FaBrain, FaCode } from 'react-icons/fa'
 
 const achievements = [
@@ -10,7 +10,7 @@ const achievements = [
     title: 'Smart India Hackathon',
     subtitle: 'SIH 2025',
     description: 'Participated in India\'s biggest hackathon — Smart India Hackathon 2025. Collaborated with a team to build an innovative solution addressing national-level challenges.',
-    icon: <HiTrophy size={26} />,
+    icon: <HiStar size={26} />,
     color: '#f59e0b',
     year: '2025',
     tag: 'National Level',
@@ -49,7 +49,7 @@ const achievements = [
 ]
 
 const stats = [
-  { label: 'Hackathons', value: '4+', icon: <HiLightningBolt />, color: '#f59e0b' },
+  { label: 'Hackathons', value: '4+', icon: <HiBolt />, color: '#f59e0b' },
   { label: 'Projects Built', value: '5+', icon: <FaCode />, color: '#00d4ff' },
   { label: 'Domains', value: '4+', icon: <FaBrain />, color: '#7c3aed' },
   { label: 'Awards', value: '4+', icon: <HiStar />, color: '#f72585' },
