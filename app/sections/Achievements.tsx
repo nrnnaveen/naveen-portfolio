@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { HiStar, HiBolt } from 'react-icons/hi'
+import { HiStar, HiLightningBolt } from 'react-icons/hi'
 import { FaAward, FaMedal, FaBrain, FaCode } from 'react-icons/fa'
 
 const achievements = [
@@ -49,7 +49,7 @@ const achievements = [
 ]
 
 const stats = [
-  { label: 'Hackathons', value: '4+', icon: <HiBolt />, color: '#f59e0b' },
+  { label: 'Hackathons', value: '4+', icon: <HiLightningBolt />, color: '#f59e0b' },
   { label: 'Projects Built', value: '5+', icon: <FaCode />, color: '#00d4ff' },
   { label: 'Domains', value: '4+', icon: <FaBrain />, color: '#7c3aed' },
   { label: 'Awards', value: '4+', icon: <HiStar />, color: '#f72585' },
@@ -166,7 +166,7 @@ export default function Achievements() {
           <div className="relative z-10">
             <div className="text-4xl mb-4">🚀</div>
             <p className="font-display font-semibold text-xl text-white mb-2">
-              "Every hackathon is a launchpad."
+            &quot;Every hackathon is a launchpad.&quot;
             </p>
             <p className="font-body text-sm text-slate-400">
               Each competition sharpened skills, expanded network, and brought me closer to my dream of building impactful tech.

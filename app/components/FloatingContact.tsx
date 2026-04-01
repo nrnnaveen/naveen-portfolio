@@ -72,7 +72,7 @@ export default function FloatingContact() {
                 <HiX size={20} />
               </button>
 
-              <h3 className="font-display font-bold text-xl text-white mb-1">Let's Connect</h3>
+              <h3 className="font-display font-bold text-xl text-white mb-1">Let&apos;s Connect</h3>
               <p className="font-body text-sm text-slate-400 mb-5">Open to collaborations & opportunities</p>
 
               <div className="flex flex-col gap-3">
