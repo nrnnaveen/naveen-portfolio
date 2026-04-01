@@ -64,7 +64,7 @@ export default function Contact() {
       <RevealOnScroll className="text-center mb-16">
         <span className="badge mb-4">GET IN TOUCH</span>
         <h2 className="section-title text-4xl md:text-5xl text-white mt-3">
-          Let's <span className="gradient-text">Connect</span>
+          Let&apos;s <span className="gradient-text">Connect</span>
         </h2>
         <p className="mt-4 font-body text-slate-400 max-w-md mx-auto">
           Open to internships, collaborations, and exciting data engineering opportunities.
@@ -80,7 +80,7 @@ export default function Contact() {
               Ready to build something great?
             </h3>
             <p className="font-body text-slate-400 mb-8 leading-relaxed">
-              Whether you have a project idea, internship opportunity, or just want to talk data — my inbox is always open. I'll respond within 24 hours.
+              Whether you have a project idea, internship opportunity, or just want to talk data — my inbox is always open. I&apos;ll respond within 24 hours.
             </p>
 
             <div className="space-y-4">
@@ -213,7 +213,7 @@ export default function Contact() {
               {status === 'sent' && (
                 <>
                   <span className="text-lg">✓</span>
-                  Message Sent! I'll respond soon.
+                  Message Sent! I&apos;ll respond soon.
                 </>
               )}
               {status === 'error' && '❌ Something went wrong. Try again.'}

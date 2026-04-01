@@ -41,7 +41,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Hello, I'm
+            Hello, I&apos;m
           </motion.p>
 
           {/* Name */}
@@ -88,7 +88,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            Pursuing B.Tech in AI & Data Science at Stella Mary's College of Engineering, Kanyakumari.
+            Pursuing B.Tech in AI &amp; Data Science at Stella Mary&apos;s College of Engineering, Kanyakumari.
             Passionate about building{' '}
             <span className="text-cyan-400 font-medium">scalable data systems</span> and solving real-world problems with AI.
           </motion.p>

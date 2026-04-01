@@ -47,9 +47,9 @@ export default function About() {
                 <div className="pl-4">
                   <div><span className="text-purple-400">def</span> <span className="text-cyan-400">__init__</span><span className="text-slate-400">(self):</span></div>
                   <div className="pl-6">
-                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">passion</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">"Data Engineering"</span></div>
-                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">goal</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">"Build Scalable Systems"</span></div>
-                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">dream</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">"Tech Entrepreneur"</span></div>
+                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">passion</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">&quot;Data Engineering&quot;</span></div>
+                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">goal</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">&quot;Build Scalable Systems&quot;</span></div>
+                    <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">dream</span> <span className="text-slate-400">=</span> <span className="text-yellow-300">&quot;Tech Entrepreneur&quot;</span></div>
                     <div><span className="text-slate-500">self</span><span className="text-slate-400">.</span><span className="text-green-400">status</span> <span className="text-slate-400">=</span> <span className="text-cyan-300">True</span> <span className="text-slate-600"># available</span></div>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ export default function About() {
           <RevealOnScroll delay={0.2} direction="left">
             <div className="space-y-5 text-slate-300 font-body leading-relaxed">
               <p>
-                I'm <span className="text-cyan-400 font-semibold">Naveen M</span>, an aspiring Data Engineer currently pursuing my B.Tech in Artificial Intelligence and Data Science at Stella Mary's College of Engineering, Kanyakumari.
+                I&apos;m <span className="text-cyan-400 font-semibold">Naveen M</span>, an aspiring Data Engineer currently pursuing my B.Tech in Artificial Intelligence and Data Science at Stella Mary&apos;s College of Engineering, Kanyakumari.
               </p>
               <p>
                 My journey into technology began with a deep fascination for how data shapes the world. I am passionate about <span className="text-purple-400 font-medium">AI, Data Science, Databases</span>, and the Internet of Things — building bridges between raw information and meaningful insights.
@@ -122,7 +122,7 @@ export default function About() {
               transition={{ delay: 0.7 }}
               style={{ borderColor: 'rgba(124,58,237,0.3)' }}
             >
-              <div className="absolute top-3 left-4 text-5xl text-purple-500/20 font-display font-black leading-none">"</div>
+              <div className="absolute top-3 left-4 text-5xl text-purple-500/20 font-display font-black leading-none">&quot;</div>
               <p className="font-body text-slate-300 italic text-sm leading-relaxed relative z-10 pt-4 pl-2">
                 Data is the new oil, but only when refined into actionable insights does it truly power innovation.
               </p>

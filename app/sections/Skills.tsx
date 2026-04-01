@@ -5,9 +5,9 @@ import { useInView } from 'react-intersection-observer'
 import RevealOnScroll from '../components/RevealOnScroll'
 import {
   SiPython, SiMysql, SiPostgresql, SiGit, SiGithub,
-  SiVisualstudio, SiMicrosoftword,
 } from 'react-icons/si'
-import { FaBrain, FaDatabase, FaWifi, FaRobot, FaServer, FaCloud } from 'react-icons/fa'
+import { VscVscode } from 'react-icons/vsc'
+import { FaBrain, FaDatabase, FaWifi, FaRobot, FaServer, FaCloud, FaFileWord } from 'react-icons/fa'
 
 const skillCategories = [
   {
@@ -34,9 +34,9 @@ const skillCategories = [
     skills: [
       { name: 'Git', icon: <SiGit />, level: 65, color: '#f05032' },
       { name: 'GitHub', icon: <SiGithub />, level: 65, color: '#f0f6fc' },
-      { name: 'VS Code', icon: <SiVisualstudio />, level: 75, color: '#007acc' },
+      { name: 'VS Code', icon: <VscVscode />, level: 75, color: '#007acc' },
       { name: 'GitHub Copilot', icon: <FaRobot />, level: 70, color: '#a78bfa' },
-      { name: 'MS Office', icon: <SiMicrosoftword />, level: 70, color: '#d83b01' },
+      { name: 'MS Office', icon: <FaFileWord />, level: 70, color: '#d83b01' },
     ]
   },
 ]
