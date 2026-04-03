@@ -36,7 +36,7 @@ const skillCategories = [
       { name: 'GitHub', icon: <SiGithub />, level: 65, color: '#f0f6fc' },
       { name: 'VS Code', icon: <VscVscode />, level: 75, color: '#007acc' },
       { name: 'GitHub Copilot', icon: <FaRobot />, level: 70, color: '#a78bfa' },
-      { name: 'MS Office', icon: <FaFileWord />, level: 70, color: '#d83b01' },
+      { name: 'MS Tools', icon: <FaFileWord />, level: 70, color: '#d83b01' },
     ]
   },
 ]
@@ -44,7 +44,7 @@ const skillCategories = [
 const domains = [
   { name: 'Artificial Intelligence', icon: <FaBrain size={24} />, color: '#00d4ff', desc: 'ML, Deep Learning, LLMs' },
   { name: 'Data Science', icon: <FaDatabase size={24} />, color: '#7c3aed', desc: 'Analytics, Visualization, Pipelines' },
-  { name: 'IoT', icon: <FaWifi size={24} />, color: '#f72585', desc: 'Sensors, Edge Computing' },
+  { name: 'Machine Learning', icon: <FaWifi size={24} />, color: '#f72585', desc: 'Model Training, Edge Computing' },
   { name: 'Prompt Engineering', icon: <FaRobot size={24} />, color: '#00f5d4', desc: 'LLM Optimization, RAG' },
 ]
 
@@ -159,7 +159,7 @@ export default function Skills() {
               <div className="font-display font-bold text-2xl text-white">Level Up Mode 🚀</div>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['Apache Spark', 'Apache Kafka', 'dbt', 'Airflow', 'Data Warehousing', 'Cloud (AWS/GCP)'].map((tech, i) => (
+              {['HTML&CSS', 'DSA', 'JAVA SCRIPT', 'INTERMEDIATE SQL', 'Python For Data Engineers', 'Cloud (AWS)'].map((tech, i) => (
                 <motion.span
                   key={tech}
                   className="px-3 py-1.5 rounded-lg font-mono text-xs text-purple-300 border border-purple-500/30 bg-purple-500/10"
