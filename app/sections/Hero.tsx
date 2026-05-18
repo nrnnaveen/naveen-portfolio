@@ -183,7 +183,7 @@ export default function Hero() {
                 <div className="relative w-24 h-24 rounded-2xl overflow-hidden shadow-neon-blue">
                   <Image
                     src="/profile.jpg"
-                    alt="Professional headshot of Naveen M"
+                    alt="Naveen M, Data Engineer"
                     fill
                     className="object-cover"
                     sizes="96px"
