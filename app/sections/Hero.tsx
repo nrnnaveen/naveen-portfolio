@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -179,8 +180,15 @@ export default function Hero() {
                   style={{ background: 'radial-gradient(circle at 50% 50%, #00d4ff, transparent 70%)' }}
                 />
                 {/* Avatar / Monogram */}
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center shadow-neon-blue">
-                  <span className="font-display font-black text-5xl text-white">N</span>
+                <div className="relative w-36 h-44 md:w-44 md:h-52 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/40 shadow-neon-blue">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Professional profile photo of Naveen M"
+                    fill
+                    priority
+                    sizes="(min-width: 768px) 176px, 144px"
+                    className="object-cover object-top rounded-2xl"
+                  />
                 </div>
                 <div className="text-center relative z-10">
                   <div className="font-display font-bold text-white text-lg">Naveen M</div>
