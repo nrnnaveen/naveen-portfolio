@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiArrowDown, HiDownload } from 'react-icons/hi'
@@ -179,8 +180,15 @@ export default function Hero() {
                   style={{ background: 'radial-gradient(circle at 50% 50%, #00d4ff, transparent 70%)' }}
                 />
                 {/* Avatar / Monogram */}
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center shadow-neon-blue">
-                  <span className="font-display font-black text-5xl text-white">N</span>
+                <div className="relative w-24 h-24 rounded-2xl overflow-hidden shadow-neon-blue">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Naveen M, Data Engineer"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                    priority
+                  />
                 </div>
                 <div className="text-center relative z-10">
                   <div className="font-display font-bold text-white text-lg">Naveen M</div>
