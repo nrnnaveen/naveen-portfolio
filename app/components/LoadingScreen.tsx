@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0)
@@ -44,8 +45,15 @@ export default function LoadingScreen() {
             animate={{ boxShadow: ['0 0 20px rgba(0,212,255,0.2)', '0 0 60px rgba(0,212,255,0.6)', '0 0 20px rgba(0,212,255,0.2)'] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
+            <Image
+              src="/profile.jpg"
+              alt="Naveen M, Data Engineer"
+              fill
+              className="object-cover rounded-2xl"
+              sizes="96px"
+              priority
+            />
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-600/10" />
-            <span className="font-display text-4xl font-black gradient-text relative z-10">N</span>
           </motion.div>
           {/* Rotating ring */}
           <motion.div
