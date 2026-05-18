@@ -180,13 +180,13 @@ export default function Hero() {
                   style={{ background: 'radial-gradient(circle at 50% 50%, #00d4ff, transparent 70%)' }}
                 />
                 {/* Avatar / Monogram */}
-                <div className="relative w-36 md:w-44 aspect-[11/13] rounded-2xl overflow-hidden border border-white/10 bg-slate-950/40 shadow-neon-blue">
+                <div className="relative w-36 md:w-44 aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-slate-950/40 shadow-neon-blue">
                   <Image
                     src="/profile.jpg"
                     alt="Naveen M"
                     fill
                     priority
-                    sizes="(min-width: 768px) 176px, 144px"
+                    sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 40vw"
                     className="object-cover object-top rounded-2xl"
                   />
                 </div>
