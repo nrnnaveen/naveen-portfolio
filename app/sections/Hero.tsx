@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiArrowDown, HiDownload } from 'react-icons/hi'
 
-const PROFILE_IMAGE_SIZES = '(min-width: 768px) 176px, 144px'
+const PROFILE_IMAGE_SIZES = '(min-width: 768px) 11rem, 9rem'
 
 export default function Hero() {
   const scrollToProjects = () => {
