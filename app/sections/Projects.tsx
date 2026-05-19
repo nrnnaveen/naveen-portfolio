@@ -48,7 +48,7 @@ const projects = [
   },
   {
     title: 'Guardian AI',
-    description: 'An AI-powered safety and security solution built for Gen Z. Leverages generative AI to provide protective features and smart monitoring capabilities.',
+    description: ' GuardianAI is an AI-powered student monitoring platform designed to identify at-risk students before academic failure occurs, It helps institutions reduce student dropouts, improve retention, and strengthen overall academic success..',
     tech: ['Python', 'Streamlit', 'Gen AI', 'Safety Systems'],
     live: 'https://guardianai-gen-z-coders-gfkaghsbjgkygydkwh5uux.streamlit.app/',
     color: '#fb923c',
