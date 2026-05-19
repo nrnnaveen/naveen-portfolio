@@ -116,7 +116,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="font-body text-xs text-slate-600 flex items-center gap-1.5 flex-wrap justify-center">
             <span>© {year} Naveen M.</span>
-            <FaHeart size={10} className="text-pink-500 animate-pulse"
+            <FaHeart size={10} className="text-pink-500 animate-pulse" />
           </div>
           <div className="font-mono text-xs text-slate-600">
             Gobichettipalayam, India 🇮🇳
