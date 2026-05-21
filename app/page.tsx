@@ -47,7 +47,16 @@ export default function Home() {
           <section id="achievements"><Achievements /></section>
           <section id="github"><GitHubStats /></section>
           <section id="contact"><Contact /></section>
-          <section <a href="https://sweet-jelly-ce9697.netlify.app/">DINO</a>>MINI GAME🎮</section>
+          <section id="dino" className="py-12 text-center">
+            <a 
+              href="https://sweet-jelly-ce9697.netlify.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-[var(--neon-blue)] text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform"
+            >
+              DINO MINI GAME 🎮
+            </a>
+          </section>
         </main>
         <Footer />
       </div>
