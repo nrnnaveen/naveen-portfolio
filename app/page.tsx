@@ -47,6 +47,7 @@ export default function Home() {
           <section id="achievements"><Achievements /></section>
           <section id="github"><GitHubStats /></section>
           <section id="contact"><Contact /></section>
+          <section <a href="https://sweet-jelly-ce9697.netlify.app/">DINO</a>>MINI GAME🎮</section>
         </main>
         <Footer />
       </div>
