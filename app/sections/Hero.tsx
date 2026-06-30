@@ -12,16 +12,9 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center section-padding grid-pattern overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Corner accents */}
-        <div className="absolute top-24 left-8 w-24 h-24 border-l-2 border-t-2 border-cyan-400/20 rounded-tl-2xl" />
-        <div className="absolute top-24 right-8 w-24 h-24 border-r-2 border-t-2 border-purple-500/20 rounded-tr-2xl" />
-        <div className="absolute bottom-12 left-8 w-24 h-24 border-l-2 border-b-2 border-cyan-400/20 rounded-bl-2xl" />
-        <div className="absolute bottom-12 right-8 w-24 h-24 border-r-2 border-b-2 border-purple-500/20 rounded-br-2xl" />
-      </div>
+      <div className="absolute inset-0 pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16 relative z-10">
+      <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
         {/* Left: Text content */}
         <div className="flex-1 text-center lg:text-left">
           {/* Badge */}
@@ -47,7 +40,7 @@ export default function Hero() {
 
           {/* Name */}
           <motion.h1
-            className="font-display font-black text-6xl md:text-7xl lg:text-8xl text-white leading-none mb-4"
+            className="font-display font-black text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] mb-4"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -58,7 +51,7 @@ export default function Hero() {
 
           {/* Typewriter */}
           <motion.div
-            className="font-display text-xl md:text-2xl text-slate-300 mb-6 h-9 flex items-center justify-center lg:justify-start gap-2"
+            className="font-display text-lg md:text-xl text-slate-300 mb-6 h-9 flex items-center justify-center lg:justify-start gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -68,11 +61,11 @@ export default function Hero() {
               sequence={[
                 'Aspiring Data Engineer',
                 2000,
-                'AI & Data Science Enthusiast',
+                'Python Developer',
                 2000,
-                'Prompt Engineering Expert',
+                'ETL & SQL Focused',
                 2000,
-                'Future Tech Entrepreneur',
+                'Cloud Data Pipelines',
                 2000,
               ]}
               wrapper="span"
@@ -103,7 +96,7 @@ export default function Hero() {
           >
             <button
               onClick={scrollToProjects}
-              className="px-7 py-3.5 rounded-xl font-body font-semibold text-white relative overflow-hidden group"
+              className="min-h-12 px-6 rounded-xl font-body font-semibold text-white relative overflow-hidden group inline-flex items-center justify-center gap-2"
               style={{ background: 'linear-gradient(135deg, #00d4ff20, #7c3aed20)', border: '1px solid rgba(0,212,255,0.4)' }}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -116,7 +109,7 @@ export default function Hero() {
             <a
               href="/NAVEEN.pdf"
               download
-              className="px-7 py-3.5 rounded-xl font-body font-semibold text-slate-200 border border-white/10 bg-white/5 hover:bg-white/10 transition-all flex items-center gap-2 group"
+              className="min-h-12 px-6 rounded-xl font-body font-semibold text-slate-200 border border-white/10 bg-white/5 hover:bg-white/10 transition-all inline-flex items-center justify-center gap-2 group"
             >
               <HiDownload className="group-hover:translate-y-0.5 transition-transform" />
               Download CV
@@ -160,7 +153,7 @@ export default function Hero() {
         >
           <div className="relative">
             {/* Main card */}
-            <div className="w-64 h-64 md:w-80 md:h-80 relative">
+            <div className="w-60 h-60 md:w-72 md:h-72 relative">
               {/* Rotating rings */}
               <motion.div
                 className="absolute -inset-6 rounded-full border border-dashed border-cyan-400/20"

@@ -10,6 +10,7 @@ const projects = [
     title: 'All Cutoff Calculator',
     description: 'A comprehensive web application to calculate academic cutoffs for various engineering admissions. Helps students plan and navigate the college admission process efficiently.',
     tech: ['Python', 'Streamlit', 'Data Analysis'],
+    github: 'https://github.com/nrnnaveen',
     live: 'https://cutoff-calculator-g2xzipk2xcfzkw6kkndwed.streamlit.app/',
     color: '#00d4ff',
     gradient: 'from-cyan-400/20 to-blue-600/10',
@@ -20,6 +21,7 @@ const projects = [
     title: 'Gen AI Assistant',
     description: 'A Generative AI powered Q&A application leveraging large language models to provide intelligent answers and insights on user queries.',
     tech: ['Python', 'Streamlit', 'GenAI', 'LLM'],
+    github: 'https://github.com/nrnnaveen',
     live: 'https://dkaz5fxkmycxtyzxqlzkum.streamlit.app/#answer',
     color: '#7c3aed',
     gradient: 'from-purple-500/20 to-violet-800/10',
@@ -30,6 +32,7 @@ const projects = [
     title: 'SQL Mobile Playground',
     description: 'An interactive SQL practice environment optimized for mobile devices. Users can write, execute, and learn SQL queries right from their smartphones.',
     tech: ['SQL', 'Node.js', 'React', 'PostgreSQL'],
+    github: 'https://github.com/nrnnaveen',
     live: 'https://sql-practice-mobile-playground.onrender.com',
     color: '#f72585',
     gradient: 'from-pink-500/20 to-rose-800/10',
@@ -40,6 +43,7 @@ const projects = [
     title: 'Frequency Analyzer Web',
     description: 'A browser-based sound analysis tool that visualizes audio frequencies in real-time. Useful for audio engineers, musicians, and sound researchers.',
     tech: ['Python', 'Streamlit', 'Web Audio API', 'Signal Processing'],
+    github: 'https://github.com/nrnnaveen',
     live: 'https://sound-lab-m5jujhneooqpsuxgtcvhvd.streamlit.app/',
     color: '#00f5d4',
     gradient: 'from-teal-400/20 to-emerald-700/10',
@@ -48,8 +52,9 @@ const projects = [
   },
   {
     title: 'Guardian AI',
-    description: ' GuardianAI is an AI-powered student monitoring platform designed to identify at-risk students before academic failure occurs, It helps institutions reduce student dropouts, improve retention, and strengthen overall academic success..',
+    description: 'GuardianAI is an AI-powered student monitoring platform designed to identify at-risk students before academic failure occurs. It helps institutions reduce dropouts, improve retention, and strengthen overall academic success.',
     tech: ['Python', 'Streamlit', 'Gen AI', 'Safety Systems'],
+    github: 'https://github.com/nrnnaveen',
     live: 'https://guardianai-gen-z-coders-gfkaghsbjgkygydkwh5uux.streamlit.app/',
     color: '#fb923c',
     gradient: 'from-orange-400/20 to-amber-700/10',
@@ -75,7 +80,7 @@ export default function Projects() {
         <div className="mt-4 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent" />
       </RevealOnScroll>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -102,7 +107,7 @@ export default function Projects() {
             )}
 
             {/* Card content */}
-            <div className="p-6 flex flex-col flex-1">
+            <div className="p-6 flex flex-col flex-1 h-full">
               {/* Icon + Tag */}
               <div className="flex items-start justify-between mb-4">
                 <div
@@ -133,6 +138,7 @@ export default function Projects() {
               </p>
 
               {/* Tech stack */}
+              <div className="mb-2 font-mono text-[10px] uppercase tracking-widest text-slate-500">Technologies Used</div>
               <div className="flex flex-wrap gap-2 mb-5">
                 {project.tech.map(t => (
                   <span
@@ -145,15 +151,25 @@ export default function Projects() {
               </div>
 
               {/* Links */}
-              <div className="flex gap-3 pt-4 border-t border-white/5">
+              <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/5 mt-auto">
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 font-body text-sm font-medium text-slate-200 transition-all hover:border-cyan-400/30 hover:text-white"
+                  whileHover={{ boxShadow: '0 0 20px rgba(0,212,255,0.12)' }}
+                >
+                  <FiGithub size={14} />
+                  GitHub
+                </motion.a>
                 <motion.a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 flex-1 justify-center py-2.5 rounded-xl font-body text-sm font-medium text-white transition-all"
+                  className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border px-4 py-2.5 font-body text-sm font-medium text-white transition-all"
                   style={{
                     background: `linear-gradient(135deg, ${project.color}20, ${project.color}10)`,
-                    border: `1px solid ${project.color}30`,
+                    borderColor: `${project.color}30`,
                   }}
                   whileHover={{
                     backgroundColor: `${project.color}30`,

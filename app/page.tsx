@@ -10,7 +10,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
-import Achievements from './sections/Achievements'
+import Certifications from './sections/Certifications'
 import GitHubStats from './sections/GitHubStats'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
@@ -44,7 +44,7 @@ export default function Home() {
           <section id="about"><About /></section>
           <section id="skills"><Skills /></section>
           <section id="projects"><Projects /></section>
-          <section id="achievements"><Achievements /></section>
+          <section id="certifications"><Certifications /></section>
           <section id="github"><GitHubStats /></section>
           <section id="contact"><Contact /></section>
           <section id="dino" className="py-12 text-center">

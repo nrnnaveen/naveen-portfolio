@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import RevealOnScroll from '../components/RevealOnScroll'
@@ -7,15 +6,28 @@ import {
   SiPython, SiMysql, SiPostgresql, SiGit, SiGithub,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
-import { FaBrain, FaDatabase, FaWifi, FaRobot, FaServer, FaCloud, FaFileWord } from 'react-icons/fa'
+import { FaCode, FaDatabase, FaServer, FaTools } from 'react-icons/fa'
 
 const skillCategories = [
   {
-    label: 'Programming',
-    icon: <FaServer />,
+    label: 'Programming Languages',
+    icon: <FaCode />,
     color: '#00d4ff',
     skills: [
-      { name: 'Python', icon: <SiPython />, level: 60, color: '#3776ab' },
+      { name: 'Python', icon: <SiPython />, level: 80, color: '#3776ab' },
+      { name: 'SQL', icon: <FaDatabase />, level: 78, color: '#8b5cf6' },
+      { name: 'JavaScript', icon: <FaCode />, level: 65, color: '#f7df1e' },
+      { name: 'HTML', icon: <FaCode />, level: 72, color: '#e34f26' },
+      { name: 'CSS', icon: <FaCode />, level: 70, color: '#1572b6' },
+    ]
+  },
+  {
+    label: 'Backend',
+    icon: <FaServer />,
+    color: '#7c3aed',
+    skills: [
+      { name: 'Flask', icon: <FaServer />, level: 68, color: '#ffffff' },
+      { name: 'FastAPI', icon: <FaServer />, level: 66, color: '#05998b' },
     ]
   },
   {
@@ -23,56 +35,46 @@ const skillCategories = [
     icon: <FaDatabase />,
     color: '#7c3aed',
     skills: [
-      { name: 'MySQL', icon: <SiMysql />, level: 60, color: '#4479a1' },
-      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 55, color: '#336791' },
+      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 74, color: '#336791' },
+      { name: 'SQLite', icon: <FaDatabase />, level: 68, color: '#64748b' },
+      { name: 'MySQL', icon: <SiMysql />, level: 70, color: '#4479a1' },
+    ]
+  },
+  {
+    label: 'Data Engineering',
+    icon: <FaServer />,
+    color: '#00f5d4',
+    skills: [
+      { name: 'Pandas', icon: <FaServer />, level: 75, color: '#130754' },
+      { name: 'NumPy', icon: <FaServer />, level: 72, color: '#4dabcf' },
+      { name: 'ETL', icon: <FaServer />, level: 73, color: '#f59e0b' },
+      { name: 'Data Cleaning', icon: <FaServer />, level: 76, color: '#22c55e' },
     ]
   },
   {
     label: 'Tools',
-    icon: <FaCloud />,
+    icon: <FaTools />,
     color: '#f72585',
     skills: [
       { name: 'Git', icon: <SiGit />, level: 65, color: '#f05032' },
       { name: 'GitHub', icon: <SiGithub />, level: 65, color: '#f0f6fc' },
       { name: 'VS Code', icon: <VscVscode />, level: 75, color: '#007acc' },
-      { name: 'GitHub Copilot', icon: <FaRobot />, level: 70, color: '#a78bfa' },
-      { name: 'MS Tools', icon: <FaFileWord />, level: 70, color: '#d83b01' },
+      { name: 'Docker', icon: <FaTools />, level: 52, color: '#0ea5e9' },
     ]
   },
 ]
 
-const domains = [
-  { name: 'Artificial Intelligence', icon: <FaBrain size={24} />, color: '#00d4ff', desc: 'ML, Deep Learning, LLMs' },
-  { name: 'Data Science', icon: <FaDatabase size={24} />, color: '#7c3aed', desc: 'Analytics, Visualization, Pipelines' },
-  { name: 'Machine Learning', icon: <FaWifi size={24} />, color: '#f72585', desc: 'Model Training, Edge Computing' },
-  { name: 'Prompt Engineering', icon: <FaRobot size={24} />, color: '#00f5d4', desc: 'LLM Optimization, RAG' },
+const currentlyLearning = [
+  'Data Engineering',
+  'Apache Spark',
+  'Apache Airflow',
+  'dbt',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'Data Warehousing',
+  'ETL Pipelines',
 ]
-
-function SkillBar({ name, icon, level, color, inView }: any) {
-  return (
-    <div className="mb-5">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          <span style={{ color }}>{icon}</span>
-          <span className="font-body text-sm text-slate-200">{name}</span>
-        </div>
-        <span className="font-mono text-xs text-slate-400">{level}%</span>
-      </div>
-      <div className="h-1.5 bg-dark-600 rounded-full overflow-hidden">
-        <motion.div
-          className="skill-bar-fill"
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : {}}
-          transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.2 }}
-          style={{
-            background: `linear-gradient(90deg, ${color}80, ${color})`,
-            boxShadow: `0 0 8px ${color}60`,
-          }}
-        />
-      </div>
-    </div>
-  )
-}
 
 export default function Skills() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
@@ -84,50 +86,22 @@ export default function Skills() {
         <h2 className="section-title text-4xl md:text-5xl text-white mt-3">
           My <span className="gradient-text">Skills</span>
         </h2>
+        <p className="mt-4 font-body text-slate-400 max-w-xl mx-auto">
+          A focused overview of the tools, languages, and data engineering foundations I use to build practical systems.
+        </p>
         <div className="mt-4 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
       </RevealOnScroll>
 
-      {/* Domain Cards */}
-      <RevealOnScroll delay={0.1} className="mb-14">
-        <h3 className="font-display font-semibold text-lg text-slate-300 mb-6 flex items-center gap-3">
-          <span className="w-8 h-px bg-cyan-400" />
-          Core Domains
-        </h3>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {domains.map((domain, i) => (
-            <motion.div
-              key={domain.name}
-              className="glass-card p-5 text-center group cursor-default"
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.1 * i, duration: 0.6 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              style={{ '--hover-color': domain.color } as any}
-            >
-              <div
-                className="w-14 h-14 rounded-2xl mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform"
-                style={{ background: `${domain.color}15`, color: domain.color, boxShadow: `0 0 20px ${domain.color}20` }}
-              >
-                {domain.icon}
-              </div>
-              <div className="font-display font-semibold text-sm text-white mb-1">{domain.name}</div>
-              <div className="font-body text-xs text-slate-500">{domain.desc}</div>
-            </motion.div>
-          ))}
-        </div>
-      </RevealOnScroll>
-
-      {/* Skill bars */}
       <RevealOnScroll delay={0.2}>
         <h3 className="font-display font-semibold text-lg text-slate-300 mb-6 flex items-center gap-3">
           <span className="w-8 h-px bg-purple-400" />
-          Technical Proficiency
+          Technical Categories
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {skillCategories.map((cat, ci) => (
             <motion.div
               key={cat.label}
-              className="glass-card p-6"
+              className="glass-card p-6 h-full flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + ci * 0.1 }}
@@ -141,32 +115,39 @@ export default function Skills() {
                 </div>
                 <h4 className="font-display font-semibold text-white">{cat.label}</h4>
               </div>
-              {cat.skills.map(skill => (
-                <SkillBar key={skill.name} {...skill} inView={inView} />
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map(skill => (
+                  <div
+                    key={skill.name}
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200"
+                  >
+                    <span style={{ color: skill.color }}>{skill.icon}</span>
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
       </RevealOnScroll>
 
-      {/* Currently Learning */}
       <RevealOnScroll delay={0.3} className="mt-10">
         <div className="glass-card p-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-purple-500/5" />
-          <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <div className="flex-shrink-0">
+          <div className="relative z-10 flex flex-col gap-5">
+            <div>
               <div className="font-mono text-xs text-cyan-400 tracking-widest mb-1">CURRENTLY LEARNING</div>
-              <div className="font-display font-bold text-2xl text-white">Level Up Mode 🚀</div>
+              <div className="font-display font-bold text-2xl text-white">Sharpening the data stack</div>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['HTML&CSS', 'DSA', 'JAVA SCRIPT', 'INTERMEDIATE SQL', 'Python For Data Engineers', 'Cloud (AWS)'].map((tech, i) => (
+              {currentlyLearning.map((tech, i) => (
                 <motion.span
                   key={tech}
-                  className="px-3 py-1.5 rounded-lg font-mono text-xs text-purple-300 border border-purple-500/30 bg-purple-500/10"
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  className="px-3 py-1.5 rounded-lg font-mono text-xs text-cyan-200 border border-cyan-400/20 bg-cyan-400/10"
+                  initial={{ opacity: 0, scale: 0.85 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 0.5 + i * 0.08 }}
-                  whileHover={{ scale: 1.05, borderColor: 'rgba(167,139,250,0.6)' }}
+                  transition={{ delay: 0.4 + i * 0.05 }}
+                  whileHover={{ scale: 1.03, borderColor: 'rgba(34,211,238,0.5)' }}
                 >
                   {tech}
                 </motion.span>
